@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,6 +14,31 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        DB::table('supplier')->insert([
+        [
+            'namaSupplier' => 'LG Technologies',
+            'alamatSupplier' => 'Jl Pahlawan Jaya Baru',
+            'nomorSupplier' => '081234356789'
+        ],
+        [
+            'namaSupplier' => 'Siplho Corporate',
+            'alamatSupplier' => 'Jl Gebang Keputih',
+            'nomorSupplier' => '6666666666'
+        ]]);
+
+        DB::table('inventory')->insert([
+        [
+            'namaBarang' => 'TV 51"',
+            'quantity' => '10',
+            'dimension' => '50',
+            'id_supplier' => '1'
+        ],
+        [
+            'namaBarang' => 'TV Android 49"',
+            'quantity' => '66',
+            'dimension' => '47',
+            'id_supplier' => '2'
+        ]]);
+
     }
 }
