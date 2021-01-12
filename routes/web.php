@@ -22,6 +22,7 @@ Auth::routes();
 
 Route::group(['middleware' => 'auth'], function() {
     Route::resource('/service', ServiceController::class)->middleware('auth');
+    Route::get('/service/inventory', [ServiceController::class, 'inventory'])->name('service.invent');
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
