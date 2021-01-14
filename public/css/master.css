@@ -1,0 +1,19 @@
+body {
+    background-color: #f6f6fc;
+}
+
+nav {
+    background-color: white;
+}
+
+.navbar-brand {
+    color: #fe6d5a;
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 24px;
+}
+
+.nav-link {
+    color: #4a3175;
+    font-size: 18px;
+}
