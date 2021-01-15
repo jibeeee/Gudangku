@@ -8,8 +8,8 @@
         <a href="#"><i class="fas fa-th-large me-2"></i>Dashboard</a>
         <a href="#"><i class="fas fa-box me-2"></i>Inventory</a>
         <a href="#"><i class="fas fa-truck me-2"></i>Supplier</a>
-        <a href="#"><i class="fas fa-caret-square-down me-2"></i>Check In</a>
-        <a href="#"><i class="fas fa-caret-square-up me-2"></i>Check Out</a>
+        <a href="#"><i class="fas fa-sign-in-alt me-2"></i></i>Check In</a>
+        <a href="#"><i class="fas fa-sign-out-alt me-2"></i>Check Out</a>
     </div>
 
     <div class="main">
