@@ -15,9 +15,17 @@ nav {
     font-size: 24px;
 }
 
+.navbar-brand:hover {
+    color: #4a3175;
+    font-family: sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+}
+
 .nav-link {
     color: #4a3175;
     font-size: 18px;
+    font-weight: 500;
 }
 
 .main {
