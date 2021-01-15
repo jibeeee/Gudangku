@@ -2,7 +2,6 @@
 
 @section('content')
 <link href="{{ asset('css/home.css') }}" rel="stylesheet"/>
-
     <div class='home-section'>
         <div class='container'>
             <div class='row home-row'>
@@ -14,7 +13,7 @@
                             Pencatatan keluar masuk gudang menjadi lebih aman dan mudah, tanpa ribet dan tapi-tapian
                         </p>
                         <a href="/service" class="btn--primary">Learn More</a>
-                    </div>
+                    </div>    
                 </div>
                 <div class='col'>
                     <div class='home-img-wrapper'>

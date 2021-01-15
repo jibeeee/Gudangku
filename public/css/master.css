@@ -1,9 +1,11 @@
 body {
     background-color: #f6f6fc;
+    color: #3b3b3b;
 }
 
 nav {
     background-color: white;
+    z-index: 1;
 }
 
 .navbar-brand {
@@ -16,4 +18,53 @@ nav {
 .nav-link {
     color: #4a3175;
     font-size: 18px;
+}
+
+.main {
+    margin: 20px;
+}
+
+.card {
+    border-radius: 15px;
+    border-width: 0px;
+    margin-bottom: 30px;
+}
+.card-highlight {
+    font-size: 36px;
+    font-weight: 900;
+    margin: 0px;
+}
+
+.card-text {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.card-table {
+    margin: 0px;
+    padding: 0px;
+}
+
+.header {
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.purple {
+    color: #4a3175;
+}
+
+.green {
+    color: #53a190;
+}
+
+.red {
+    color: #e2626b;
+}
+
+.grey {
+    color: #939fb0;
+}
+.black {
+    color: #3b3b3b;
 }
