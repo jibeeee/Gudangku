@@ -7,16 +7,30 @@
     padding: 0px;
 }
 
-.left {
+.login-left {
     color: #ffff;
     background-color: #fe6d5a;
     border-radius: 40px 0px 0px 40px;
     padding: 20px 20px 60px 20px;
 }
 
-.right {
+.login-right {
     color: #4a3175;
     background-color: #ffff;
+    border-radius: 0px 40px 40px 0px;
+    padding: 20px 40px 60px 20px;
+}
+
+.register-left {
+    color: #fe6d5a;
+    background-color: #ffff;
+    border-radius: 40px 0px 0px 40px;
+    padding: 20px 20px 60px 20px;
+}
+
+.register-right {
+    color: #ffff;
+    background-color: #4a3175;
     border-radius: 0px 40px 40px 0px;
     padding: 20px 40px 60px 20px;
 }
@@ -27,7 +41,7 @@
     padding: 0px 25px 15px 25px;
 }
 
-.icon {
+.login-icon {
     padding: 10px;
     color: #fe6d5a;
     background-color: white;
@@ -36,11 +50,13 @@
     border-radius: 50px;
 }
 
-h1 {
-    font-size: 28px;
-    font-weight: 600;
+.register-icon {
+    padding: 10px;
+    color: #4a3175;
+    background-color: white;
+    min-width: 50px;
     text-align: center;
-    padding: 100px 50px 40px 50px;
+    border-radius: 50px;
 }
 
 p {
@@ -50,10 +66,33 @@ p {
     font-size: 14px;
 }
 
-.title-right {
-    padding: 0px;
+.login-title-right {
+    padding: 35px 0px 0px 0px;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
 }
 
+.login-title-left {
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    padding: 100px 50px 40px 50px;
+}
+
+.register-title-right {
+    padding: 35px 0px 25px 0px;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.register-title-left {
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    padding: 35px 50px 40px 50px;
+}
 .form-control {
     border-radius: 50px;
     border-width: 0px;
@@ -65,7 +104,12 @@ p {
 }
 
 .home-img-wrapper {
-    max-width: 240px;
+    max-width: 200px;
+}
+
+.home-img-wrapper-register {
+    max-width: 280px;
+    margin-bottom: 20px;
 }
 
 .home-img {
@@ -81,4 +125,8 @@ img {
     max-width: 100%;
     vertical-align: middle;
     display: inline-block;
+}
+
+.btn-large-2 {
+    margin-top: 6px;
 }

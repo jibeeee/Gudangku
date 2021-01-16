@@ -13,6 +13,15 @@
     </div>
 
     <div class="main">
+
+        <!-- Status Bar -->
+        <div class="bar">
+            <p>Total Available Space</p>
+            <div class="progress shadow">
+                <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+            </div>
+
+        </div>
         
         <!-- Hightlight Box -->
         <div class='row'>

@@ -8,15 +8,15 @@
             <div class="row justify-content-center">
 
                 <!-- Left Panel -->
-                <div class="col left">
-                    <h1>Login to GudangKu</h1>
+                <div class="col login-left">
+                    <h1 class="login-title-left">Login to GudangKu</h1>
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
     
                         <div class="form-group row">
                              <div class="col">
                                 <div class="input-group">
-                                    <i class="fas fa-envelope icon"></i>
+                                    <i class="fas fa-envelope login-icon"></i>
                                     <input id="email" type="email" placeholder="Email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                                 </div>
     
@@ -31,7 +31,7 @@
                         <div class="form-group row">
                             <div class="col">
                                 <div class="input-group">
-                                    <i class="fas fa-lock icon"></i>
+                                    <i class="fas fa-lock login-icon"></i>
                                     <input id="password" type="password" placeholder="Password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">      
                                 </div>
     
@@ -67,10 +67,10 @@
                 </div>
 
                 <!-- RightPanel -->
-                <div class="col right">
+                <div class="col login-right">
                     <div class="row">
                         <div class="col center">
-                            <h1 class="title-right" >Hello, Friend!</h1>
+                            <h1 class="login-title-right" >Hello, Friend!</h1>
                         </div>
                     </div>
 
