@@ -28,11 +28,11 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
+                        <div class="form-group col">
                             <div class="col">
                                 <div class="input-group">
                                     <i class="fas fa-lock login-icon"></i>
-                                    <input id="password" type="password" placeholder="Password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">      
+                                    <input id="password" type="password" placeholder="Password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
                                 </div>
 
                                 @error('password')
