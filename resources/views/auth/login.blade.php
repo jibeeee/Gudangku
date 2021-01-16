@@ -12,14 +12,14 @@
                     <h1 class="login-title-left">Login to GudangKu</h1>
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
-    
+
                         <div class="form-group row">
                              <div class="col">
                                 <div class="input-group">
                                     <i class="fas fa-envelope login-icon"></i>
                                     <input id="email" type="email" placeholder="Email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                                 </div>
-    
+
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -27,14 +27,14 @@
                                 @enderror
                             </div>
                         </div>
-    
+
                         <div class="form-group row">
                             <div class="col">
                                 <div class="input-group">
                                     <i class="fas fa-lock login-icon"></i>
                                     <input id="password" type="password" placeholder="Password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">      
                                 </div>
-    
+
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -42,25 +42,25 @@
                                 @enderror
                             </div>
                         </div>
-    
+
                         <div class="form-group row">
                             <div class="col center">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-    
+
                                     <label class="form-check-label" for="remember">
                                         {{ __('Remember Me') }}
                                     </label>
                                 </div>
                             </div>
                         </div>
-    
+
                         <div class="form-group row">
                             <div class="col center">
                                 <button type="submit" class="btn btn-large">
                                     {{ __('Login') }}
                                 </button>
-                            
+
                             </div>
                         </div>
                     </form>

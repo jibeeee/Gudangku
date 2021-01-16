@@ -8,12 +8,12 @@
                 <div class='col'>
                     <div class='home-text-wrapper'>
                         <h1 class='heading'>GudangKu</h1>
-                        <div class='top-line'>Pertama di Indonesia</div>
+                        <div class='top-line'>Pertama di Uganda</div>
                         <p class='home-subtitle'>
                             Pencatatan keluar masuk gudang menjadi lebih aman dan mudah, tanpa ribet dan tapi-tapian
                         </p>
                         <a href="/service" class="btn--primary">Learn More</a>
-                    </div>    
+                    </div>
                 </div>
                 <div class='col'>
                     <div class='home-img-wrapper'>
