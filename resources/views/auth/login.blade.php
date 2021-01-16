@@ -28,7 +28,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group col">
+                        <div class="form-group row">
                             <div class="col">
                                 <div class="input-group">
                                     <i class="fas fa-lock login-icon"></i>
