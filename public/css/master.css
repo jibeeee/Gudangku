@@ -1,6 +1,7 @@
 body {
     background-color: #f6f6fc;
     color: #3b3b3b;
+    font-family: Montserrat;
 }
 
 nav {
@@ -86,10 +87,54 @@ nav {
     margin-right: 4px;
 }
 
+.btn-large {
+    color: white;
+    background-color: #4a3175;
+    border-radius: 50px;
+    border-color: #4a3175;
+    border-width: 2px;
+    font-size: 16px;
+    padding: 8px 68px 8px 68px;
+    font-weight: normal;
+}
+
+.btn-large-secondary {
+    color: #fe6d5a;
+    background-color: white;
+    border-radius: 50px;
+    border-color: #fe6d5a;
+    border-width: 2px;
+    font-size: 16px;
+    padding: 8px 68px 8px 68px;
+    font-weight: normal;
+}
+
 .btn-primary:hover,
 .btn-secondary:hover {
     background-color: #4a3175;
     border-color: #4a3175;
+}
+
+.btn-large:hover {
+    color: white;
+    background-color: #fe6d5a;
+    border-radius: 50px;
+    border-color: white;
+    border-width: 2px;
+    font-size: 16px;
+    padding: 8px 68px 8px 68px;
+    font-weight: normal;
+}
+
+.btn-large-secondary:hover {
+    color: white;
+    background-color: #4a3175;
+    border-radius: 50px;
+    border-color: #4a3175;
+    border-width: 2px;
+    font-size: 16px;
+    padding: 8px 68px 8px 68px;
+    font-weight: normal;
 }
 
 .purple {
