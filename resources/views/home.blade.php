@@ -21,6 +21,25 @@
                     </div>
                 </div>
             </div>
+
+            <div class='row home-row'>
+                <div class='col'>
+                    <div class='home-img-wrapper'>
+                        <img src="{{ asset('img/undraw_logistics_x4dc.svg') }}" alt="ilustrasi gudang" class='home-img' />
+                    </div>
+                </div>
+                <div class='col'>
+                    <div class='home-text-wrapper'>
+                        <h1 class='heading'>Lorem</h1>
+                        <div class='top-line'>Ipsum</div>
+                        <p class='home-subtitle'>
+                            Lorem Ipsum Dolor Sit Amet
+                        </p>
+                        <a href="/service" class="btn--primary">Amet Amet</a>
+                    </div>
+                </div>
+                
+            </div>
         </div>
     </div>
 @endsection
