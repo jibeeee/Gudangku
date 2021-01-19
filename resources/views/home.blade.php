@@ -8,9 +8,9 @@
                 <div class='col'>
                     <div class='home-text-wrapper'>
                         <h1 class='heading'>GudangKu</h1>
-                        <div class='top-line'>Pertama di Uganda</div>
+                        <div class='top-line'>Pertama di ITTelkom Surabaya</div>
                         <p class='home-subtitle'>
-                            Pencatatan keluar masuk gudang menjadi lebih aman dan mudah, tanpa ribet dan tapi-tapian
+                            Pencatatan barang di gudang menjadi lebih aman dan mudah, tanpa ribet tanpa bingung.
                         </p>
                         <a href="/service" class="btn--primary">Learn More</a>
                     </div>
