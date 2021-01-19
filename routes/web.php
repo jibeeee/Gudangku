@@ -15,14 +15,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return redirect('/home');
 });
 
 Auth::routes();
 
 Route::group(['middleware' => 'auth'], function() {
     Route::resource('/service', ServiceController::class)->middleware('auth');
-    Route::get('/service/inventory', [ServiceController::class, 'inventory'])->name('service.invent');
+    Route::get('/service/supplier', [ServiceController::class, 'supplier'])->name('service.supplier');
+    Route::get('/service/inventory', [ServiceController::class, 'index_inventory']);
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

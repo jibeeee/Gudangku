@@ -89,7 +89,7 @@
                     </div>
                     <div class="row">
                         <div class="col center">
-                            <a href="" class="btn btn-large-secondary">Register</a>
+                        <a href="{{route('register')}}" class="btn btn-large-secondary">Register</a>
                         </div>
                     </div>
                 </div>

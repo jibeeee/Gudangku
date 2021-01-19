@@ -15,16 +15,13 @@ class CreateActivityTable extends Migration
     {
         Schema::create('activity', function (Blueprint $table) {
             $table->id();
-
             // $table->num('availableSpace',256);
-
-            $table->integer('id_activity');
-            $table->string('namaBarang',256);
-            $table->integer('quantity');
-            $table->integer('dimension');
-            $table->unsignedBigInteger('id_supplier');
-            $table->foreign('id_supplier')->references('id')->on('supplier');
-
+            $table->unsignedBigInteger('id_barang');
+            $table->foreign('id_barang')->references('id')->on('barang');
+            $table->unsignedBigInteger('id_user');
+            $table->foreign('id_user')->references('id')->on('users');
+            $table->integer('value_quantity');
+            $table->integer('value_activity');
             $table->timestamps();
         });
     }

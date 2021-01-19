@@ -2,7 +2,7 @@
 
 @section('content')
     <link href="{{ asset('css/sidenav.css') }}" rel="stylesheet"/>
-    
+
     <!-- SideNav -->
     <div class="sidenav">
         <a href="#"><i class="fas fa-th-large me-2"></i>Dashboard</a>
@@ -22,7 +22,7 @@
             </div>
 
         </div>
-        
+
         <!-- Hightlight Box -->
         <div class='row'>
             <div class='col'>
@@ -31,7 +31,7 @@
                         <p class='card-highlight purple'>1000</p>
                         <p class='card-text'>Total Stocks</p>
                     </div>
-                </div>                 
+                </div>
             </div>
             <div class='col'>
                 <div class="card shadow">
@@ -39,7 +39,7 @@
                         <p class='card-highlight green'>1000</p>
                         <p class='card-text'>Number of Check In</p>
                     </div>
-                </div>                 
+                </div>
             </div>
             <div class='col'>
                 <div class="card shadow">
@@ -47,7 +47,7 @@
                         <p class='card-highlight red'>1000</p>
                         <p class='card-text'>Number of Check In</p>
                     </div>
-                </div>                 
+                </div>
             </div>
             <div class='col'>
                 <div class="card shadow">
@@ -55,7 +55,7 @@
                         <p class='card-highlight grey'>1000</p>
                         <p class='card-text'>Total Suppliers</p>
                     </div>
-                </div>                 
+                </div>
             </div>
         </div>
 
@@ -66,10 +66,10 @@
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Total Quantity</th>
+                            <th scope="col">Dimension</th>
+                            <th scope="col">Supploer</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -94,7 +94,7 @@
                 </table>
             </div>
         </div>
-        
+
 
     </div>
 @endsection
