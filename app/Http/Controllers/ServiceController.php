@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Activity;
 use App\Models\Inventory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class ServiceController extends Controller
@@ -16,14 +17,16 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        $daftarActivity = Activity::all();
+        $id = Auth::id();
+        $daftarActivity = Activity::where('id_user', $id)->get();
 
         return view('services.dashboard')->with('daftarActivity', $daftarActivity);
     }
 
     public function index_inventory()
     {
-        $daftarInventory= Inventory::all();
+        $id = Auth::id();
+        $daftarInventory = Inventory::where('id_user', $id)->get();
 
         return view('services.inventory')->with('daftarInventory', $daftarInventory);
     }

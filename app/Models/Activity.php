@@ -10,4 +10,9 @@ class Activity extends Model
     use HasFactory;
 
     protected $table = 'activity';
+
+    public function barang()
+    {
+        return $this->belongsTo(Barang::class, 'id_barang');
+    }
 }
