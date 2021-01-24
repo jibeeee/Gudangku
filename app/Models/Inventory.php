@@ -10,4 +10,11 @@ class Inventory extends Model
     use HasFactory;
 
     protected $table = 'inventory';
+
+    public function barang()
+    {
+        return $this->belongsTo(Barang::class, 'id_barang');
+    }
+
 }
+
