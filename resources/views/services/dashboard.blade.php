@@ -7,8 +7,8 @@
     <div class="sidenav">
         <a href="{{route('service.index')}}"><i class="fas fa-th-large me-2"></i>Dashboard</a>
         <a href="{{route('service.inventory')}}"><i class="fas fa-box me-2"></i>Inventory</a>
-        <a href="#"><i class="fas fa-truck me-2"></i>Supplier</a>
-        <a href="/service/checkin"><i class="fas fa-sign-in-alt me-2 rotate"></i></i>Check In</a>
+        <a href="{{route('supplier.index')}}"><i class="fas fa-truck me-2"></i>Supplier</a>
+        <a href="{{route('service.create')}}"><i class="fas fa-sign-in-alt me-2 rotate"></i></i>Check In</a>
         <a href="#"><i class="fas fa-sign-out-alt me-2 rotate-2"></i>Check Out</a>
     </div>
 
@@ -70,6 +70,7 @@
                             <th scope="col">Name</th>
                             <th scope="col">Dimension</th>
                             <th scope="col">Quantity</th>
+                            <th scope="col">Activity</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -79,6 +80,7 @@
                                 <td>{{isset($item->barang->namaBarang) ? $item->barang->namaBarang : '-'}}</td>
                                 <td>{{isset($item->barang->dimension) ? $item->barang->dimension : '-'}}</td>
                                 <td>{{$item->value_quantity}}</td>
+                                <td>{{$item->value_activity == 1 ? 'Check In':'Check Out'}}</td>
                             </tr>
                         @endforeach
                     </tbody>

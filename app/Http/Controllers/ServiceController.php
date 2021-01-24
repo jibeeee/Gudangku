@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Activity;
+use App\Models\Barang;
 use App\Models\Inventory;
+use App\Models\Supplier;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -38,7 +40,9 @@ class ServiceController extends Controller
      */
     public function create()
     {
-        return view('services.create');
+        $id = Auth::id();
+        $daftarSupplier= Supplier::where('id_user', $id)->get();
+        return view('services.checkin')->with('daftarSupplier', $daftarSupplier);
     }
 
     /**
@@ -49,7 +53,38 @@ class ServiceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $id = Auth::id();
+
+        $dimension = $request->length * $request->width * $request->height;
+
+
+        $daftarBarang = new Barang;
+        $daftarBarang->id_user = $id;
+        $daftarBarang->id_supplier = $request->supplier;
+        $daftarBarang->namaBarang = $request->namaBarang;
+        $daftarBarang->dimension = $dimension;
+
+        $daftarBarang->save();
+
+        $id_barang = $daftarBarang->id;
+
+        $addInventory = new Inventory;
+        $addInventory->id_barang = $id_barang;
+        $addInventory->id_user = $id;
+        $addInventory->quantity = $request->quantity;
+
+        $addInventory->save();
+
+        $addActivity = new Activity;
+        $addActivity->id_barang = $id_barang;
+        $addActivity->id_user = $id;
+        $addActivity->value_quantity = $request->quantity;
+        // Check-in value
+        $addActivity->value_activity = 1;
+
+        $addActivity->save();
+
+        return redirect()->route('service.create');
     }
 
     /**
