@@ -1,0 +1,21 @@
+.card {
+    margin: 5% 10% 10% 10%;
+    border-radius: 40px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.form-label {
+    font-weight: bolder;
+}
+
+.input-group {
+    display: flex;
+    width: 100%;
+}
+
+.form-control {
+    border-radius: 50px;
+}

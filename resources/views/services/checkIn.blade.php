@@ -2,6 +2,7 @@
 
 @section('content')
     <link href="{{ asset('css/sidenav.css') }}" rel="stylesheet"/>
+    <link href="{{ asset('css/checkIn.css') }}" rel="stylesheet"/>
     
     <!-- SideNav -->
     <div class="sidenav">
@@ -24,20 +25,24 @@
                     <div class="row">
                         <div class="col">
                             <label for="panjang_barang" class="form-label">Length</label>
-                            <input type="number" class="form-control" id="panjang_barang" min="1">
-                        
+                            <div class="input-group">
+                                <input type="number" class="form-control" id="panjang_barang" min="1">
+                                <span class="input-group-text" id="basic-addon2">cm</span>
+                            </div>
                         </div>
                         <div class="col">
                             <label for="lebar_barang" class="form-label">Width</label>
-                            <input type="number" class="form-control" id="lebar_barang" min="1">
-                        
+                            <div class="input-group">
+                                <input type="number" class="form-control" id="lebar_barang" min="1">
+                                <span class="input-group-text" id="basic-addon2">cm</span>
+                            </div>
                         </div>
                         <div class="col">
                             <label for="tinggi_barang" class="form-label">Heigth</label>
-                            <input type="number" class="form-control" id="tinggi_barang" min="1">
-                        
-
-
+                            <div class="input-group">
+                                <input type="number" class="form-control" id="tinggi_barang" min="1">
+                                <span class="input-group-text" id="basic-addon2">cm</span>
+                            </div>
                         </div>
                     </div>
 
