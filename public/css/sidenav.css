@@ -28,3 +28,11 @@
 .main {
     margin-left: 220px;
 }
+
+.rotate {
+    transform: rotate(90deg);
+}
+
+.rotate-2 {
+    transform: rotate(-90deg);
+}

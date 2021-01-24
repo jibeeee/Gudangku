@@ -15,7 +15,7 @@
     <div class="main">
 
         <!-- Latest Activity Table -->
-        <p class="header">Latest Activity</p>
+        <p class="header">Inventory</p>
         <div class="card shadow">
             <div class="card-body card-table">
                 <table class="table table-hover">
