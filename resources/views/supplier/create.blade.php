@@ -22,7 +22,7 @@
                     <div class="row">
                         <div class="col left">
                             <div class='home-img-wrapper'>
-                                <img src="{{asset('img/box.svg')}}" alt="ilustrasi kotak" class='home-img' />
+                                <img src="{{asset('img/delivery-truck.svg')}}" alt="ilustrasi truk" class='home-img' />
                             </div>
                         </div>
                         <div class="col right">
@@ -30,6 +30,9 @@
                             <input type="text" class="form-control" id="namaBarang" name="namaBarang">
 
                             <label for="nama_barang" class="form-label">Contact Number</label>
+                            <input type="text" class="form-control" id="contact" name="contact">
+
+                            <label for="nama_barang" class="form-label">Address</label>
                             <input type="text" class="form-control" id="contact" name="contact">
                         </div>
                     </div>
