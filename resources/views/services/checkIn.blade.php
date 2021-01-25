@@ -3,13 +3,13 @@
 @section('content')
     <link href="{{ asset('css/sidenav.css') }}" rel="stylesheet"/>
     <link href="{{ asset('css/checkIn.css') }}" rel="stylesheet"/>
-    
+
     <!-- SideNav -->
     <div class="sidenav">
         <a href="{{route('service.index')}}"><i class="fas fa-th-large me-2"></i>Dashboard</a>
         <a href="{{route('service.inventory')}}"><i class="fas fa-box me-2"></i>Inventory</a>
         <a href="{{route('supplier.index')}}"><i class="fas fa-truck me-2"></i>Supplier</a>
-        <a href="{{route('service.create')}}"><i class="fas fa-sign-in-alt me-2 rotate"></i></i>Check In</a>
+        <a href="{{route('service.create')}}" id="sidenav-active"><i class="fas fa-sign-in-alt me-2 rotate"></i></i>Check In</a>
         <a href="#"><i class="fas fa-sign-out-alt me-2 rotate-2"></i>Check Out</a>
     </div>
 
@@ -28,7 +28,7 @@
                         <div class="col right">
                             <label for="nama_barang" class="form-label">Item's Name</label>
                             <input type="text" class="form-control" id="namaBarang" name="namaBarang">
-        
+
                             <label for="nama_barang" class="form-label">Quantity</label>
                             <input type="number" class="form-control" id="quantity" name="quantity" min="0">
                         </div>

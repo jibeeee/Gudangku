@@ -5,7 +5,7 @@
 
     <!-- SideNav -->
     <div class="sidenav">
-        <a href="{{route('service.index')}}"><i class="fas fa-th-large me-2"></i>Dashboard</a>
+        <a href="{{route('service.index')}}" id="sidenav-active"><i class="fas fa-th-large me-2"></i>Dashboard</a>
         <a href="{{route('service.inventory')}}"><i class="fas fa-box me-2"></i>Inventory</a>
         <a href="{{route('supplier.index')}}"><i class="fas fa-truck me-2"></i>Supplier</a>
         <a href="{{route('service.create')}}"><i class="fas fa-sign-in-alt me-2 rotate"></i></i>Check In</a>
