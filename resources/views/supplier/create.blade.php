@@ -3,7 +3,7 @@
 @section('content')
     <link href="{{ asset('css/sidenav.css') }}" rel="stylesheet"/>
     <link href="{{ asset('css/supplier.css') }}" rel="stylesheet"/>
-    
+
     <!-- SideNav -->
     <div class="sidenav">
         <a href="{{route('service.index')}}"><i class="fas fa-th-large me-2"></i>Dashboard</a>
@@ -28,18 +28,18 @@
                         <div class="col right">
                             <label for="nama_barang" class="form-label">Supplier's Name</label>
                             <input type="text" class="form-control" id="namaBarang" name="namaBarang">
-        
+
                             <label for="nama_barang" class="form-label">Quantity</label>
                             <input type="number" class="form-control" id="quantity" name="quantity" min="0">
                         </div>
                     </div>
 
-                    <label for="supplier" class="form-label">Supplier</label>
+                    {{-- <label for="supplier" class="form-label">Supplier</label>
                         <select id="supplier" name="supplier">
                             @foreach ($daftarSupplier as $item)
                                 <option value="{{$item->id}}">{{$item->namaSupplier}}</option>
                             @endforeach
-                        </select>
+                        </select> --}}
 
                     <div class="col submit">
                         <button class="btn btn-large" type="submit">SUBMIT</button>

@@ -41,8 +41,8 @@
                 </table>
             </div>
         </div>
-        <a href="/service/create" class="btn btn--primary">Create</a>
-        <button type="button" class="btn btn-primary" href="/supplier/create">Create</button>
+
+        <a href="{{route('supplier.create')}}" class="btn btn-primary btn-sm">Create Supplier</a>
         <button type="button" class="btn btn-secondary">Edit</button>
 
     </div>

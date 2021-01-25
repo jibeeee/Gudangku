@@ -22,23 +22,22 @@
                 </div>
             </div>
 
-            <div class='row home-row'>
+            <div class='row home-row section-2'>
                 <div class='col'>
                     <div class='home-img-wrapper'>
-                        <img src="{{ asset('img/undraw_logistics_x4dc.svg') }}" alt="ilustrasi gudang" class='home-img' />
+                        <img src="{{ asset('img/undraw_heavy_box_agqi.svg') }}" alt="ilustrasi gudang" class='home-img' />
                     </div>
                 </div>
-                <div class='col'>
-                    <div class='home-text-wrapper'>
-                        <h1 class='heading'>Lorem</h1>
-                        <div class='top-line'>Ipsum</div>
+                <div class='col' >
+                    <div class='home-text-wrapper mt-5'>
+                        <div class='top-line'>Latar Belakang</div>
                         <p class='home-subtitle'>
-                            Lorem Ipsum Dolor Sit Amet
+                            Hampir 50% dari pemilik Online Shop tidak mempunyai ruang yang cukup untuk menyimpan barang.<br><br>
+                            Kami membantu pemilik Online Shop untuk menyimpan barang jualannya secara praktis dan aman.
                         </p>
-                        <a href="/service" class="btn--primary">Amet Amet</a>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </div>
