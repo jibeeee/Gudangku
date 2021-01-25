@@ -66,4 +66,7 @@
 </body>
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}"></script>
+
+<!--Sweet Alert -->
+@include('sweetalert::alert')
 </html>

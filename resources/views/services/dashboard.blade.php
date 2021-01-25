@@ -5,11 +5,10 @@
 
     <!-- SideNav -->
     <div class="sidenav">
-        <a href="{{route('service.index')}}"><i class="fas fa-th-large me-2"></i>Dashboard</a>
+        <a href="{{route('service.index')}}" id="sidenav-active"><i class="fas fa-th-large me-2"></i>Dashboard</a>
         <a href="{{route('service.inventory')}}"><i class="fas fa-box me-2"></i>Inventory</a>
         <a href="{{route('supplier.index')}}"><i class="fas fa-truck me-2"></i>Supplier</a>
-        <a href="{{route('service.create')}}"><i class="fas fa-sign-in-alt me-2 rotate"></i></i>Check In</a>
-        <a href="#"><i class="fas fa-sign-out-alt me-2 rotate-2"></i>Check Out</a>
+        <a href="{{route('service.create')}}"><i class="fas fa-sign-in-alt me-2 rotate"></i></i>Create Item</a>
     </div>
 
     <div class="main">
@@ -18,7 +17,7 @@
         <div class="bar">
             <p>Total Available Space</p>
             <div class="progress shadow">
-                <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                <div class="progress-bar" role="progressbar" style="width: {{$space}};" aria-valuenow={{$space}} aria-valuemin="0" aria-valuemax="100">{{$space}}%</div>
             </div>
 
         </div>
@@ -28,7 +27,7 @@
             <div class='col'>
                 <div class="card shadow">
                     <div class="card-body">
-                        <p class='card-highlight purple'>1000</p>
+                        <p class='card-highlight purple'>{{$stock}}</p>
                         <p class='card-text'>Total Stocks</p>
                     </div>
                 </div>
@@ -36,7 +35,7 @@
             <div class='col'>
                 <div class="card shadow">
                     <div class="card-body">
-                        <p class='card-highlight green'>1000</p>
+                        <p class='card-highlight green'>{{$checkIn}}</p>
                         <p class='card-text'>Number of Check In</p>
                     </div>
                 </div>
@@ -44,15 +43,15 @@
             <div class='col'>
                 <div class="card shadow">
                     <div class="card-body">
-                        <p class='card-highlight red'>1000</p>
-                        <p class='card-text'>Number of Check In</p>
+                        <p class='card-highlight red'>{{$checkOut}}</p>
+                        <p class='card-text'>Number of Check Out</p>
                     </div>
                 </div>
             </div>
             <div class='col'>
                 <div class="card shadow">
                     <div class="card-body">
-                        <p class='card-highlight grey'>1000</p>
+                        <p class='card-highlight grey'>{{$supplier}}</p>
                         <p class='card-text'>Total Suppliers</p>
                     </div>
                 </div>

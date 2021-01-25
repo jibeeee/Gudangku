@@ -8,7 +8,7 @@ use App\Models\Inventory;
 use App\Models\Supplier;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class ServiceController extends Controller
 {
@@ -22,26 +22,40 @@ class ServiceController extends Controller
         $id = Auth::id();
         $daftarActivity = Activity::where('id_user', $id)->get();
 
-        return view('services.dashboard')->with('daftarActivity', $daftarActivity);
+        $stock = Inventory::where('id_user', $id)->count();
+        $checkIn = Activity::where('id_user', $id)->where('value_activity', 1)->count();
+        $checkOut = Activity::where('id_user', $id)->where('value_activity', 0)->count();
+        $supplier = Supplier::where('id_user', $id)->count();
+
+        $space = Inventory::where('id_user', $id)->sum('quantity');
+        $space = 100*$space/10000;
+
+        // $query = Activity::select('quantity', 'dimension')
+        //         ->join('barang as b', 'Activity.id_barang', '=', 'b.id')
+        //         ->join('inventory as i', 'b.id', '=', 'i.id_barang')
+        //         ->where('i.id_user', $id)
+        //         ->where('quantity', '>', '0')
+        //         ->first();
+        // dd($query);
+        return view('services.dashboard')->with([
+            'daftarActivity'=>$daftarActivity,
+            'stock'=>$stock,
+            'checkIn'=>$checkIn,
+            'checkOut'=>$checkOut,
+            'supplier'=>$supplier,
+            'space'=>$space
+            ]);
     }
 
     public function index_inventory()
     {
         $id = Auth::id();
 
-        // $query = DB::table('supplier as s')
-        //         ->select('namaSupplier', 'namaBarang', 'dimension', 'quantity', 'i.id')
-        //         ->join('barang as b', 's.id', '=', 'b.id_supplier')
-        //         ->join('inventory as i', 'b.id', '=', 'i.id_barang')
-        //         ->where('b.id_user', $id)
-        //         ->get();
-
         $query = Supplier::select('namaSupplier', 'namaBarang', 'dimension', 'quantity', 'b.id')
                 ->join('barang as b', 'supplier.id', '=', 'b.id_supplier')
                 ->join('inventory as i', 'b.id', '=', 'i.id_barang')
                 ->where('b.id_user', $id)
                 ->get();
-        // dd($query);
         return view('services.inventory')->with('daftarInventory', $query);
     }
 
@@ -65,6 +79,10 @@ class ServiceController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'supplier' => 'required'
+        ]);
+
         $id = Auth::id();
 
         $dimension = $request->length * $request->width * $request->height;
@@ -96,6 +114,8 @@ class ServiceController extends Controller
 
         $addActivity->save();
 
+        Alert::success('Item Added Successfully ', 'New Item Successfully Added');
+
         return redirect()->route('service.create');
     }
 
@@ -122,21 +142,12 @@ class ServiceController extends Controller
 
         $barangId = $id;
 
-        // $query = DB::table('supplier as s')
-        //         ->select('namaBarang', 'quantity', 'i.id')
-        //         ->join('barang as b', 's.id', '=', 'b.id_supplier')
-        //         ->join('inventory as i', 'b.id', '=', 'i.id_barang')
-        //         ->where('b.id_user', $id_user)
-        //         ->where('i.id' , $inventoryId)
-        //         ->first();
-
         $query = Supplier::select('namaBarang', 'quantity', 'b.id')
         ->join('barang as b', 'supplier.id', '=', 'b.id_supplier')
         ->join('inventory as i', 'b.id', '=', 'i.id_barang')
         ->where('b.id_user', $id_user)
         ->where('b.id' , $barangId)
         ->first();
-        // dd($query);
         return view ('services.edit', compact('barangId', 'query'));
     }
 
@@ -171,10 +182,11 @@ class ServiceController extends Controller
         $addActivity->value_activity = 1;
         // Check-in value
         if ($sesudah < $sebelum)
-            $addActivity->value_activity = 2;
+            $addActivity->value_activity = 0;
 
         $addActivity->save();
-        // Alert::success('Edit Successfully', 'Data Barang Berhasil Diubah');
+
+        Alert::success('Edit Successfully', 'Data Successfully Changed');
 
         return redirect()->route('service.inventory');
     }
@@ -187,11 +199,7 @@ class ServiceController extends Controller
      */
     public function destroy($id)
     {
-        //
-    }
-
-    public function supplier()
-    {
 
     }
+
 }

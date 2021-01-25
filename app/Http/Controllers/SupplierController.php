@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Supplier;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class SupplierController extends Controller
 {
@@ -39,7 +40,18 @@ class SupplierController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $id = Auth::id();
+
+        $daftarSupplier = new Supplier;
+        $daftarSupplier->id_user = $id;
+        $daftarSupplier->namaSupplier = $request->namaSupplier;
+        $daftarSupplier->alamatSupplier = $request->Address;
+        $daftarSupplier->nomorSupplier = $request->contact;
+        $daftarSupplier->save();
+
+        Alert::success('Added Successfully ', 'Data Supplier Successfully Added');
+
+        return redirect()->route('supplier.index');
     }
 
     /**

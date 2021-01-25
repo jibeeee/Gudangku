@@ -21,7 +21,9 @@ Route::get('/', function () {
 Route::get('/service/checkin', function () {
     return view('services.checkIn');
 });
-
+Route::get('/service/create', function () {
+    return view('supplier.create');
+});
 Auth::routes();
 
 Route::group(['middleware' => 'auth'], function() {

@@ -7,9 +7,8 @@
     <div class="sidenav">
        <a href="{{route('service.index')}}"><i class="fas fa-th-large me-2"></i>Dashboard</a>
         <a href="{{route('service.inventory')}}"><i class="fas fa-box me-2"></i>Inventory</a>
-        <a href="{{route('supplier.index')}}"><i class="fas fa-truck me-2"></i>Supplier</a>
-        <a href="{{route('service.create')}}"><i class="fas fa-sign-in-alt me-2 rotate"></i></i>Check In</a>
-        <a href="#"><i class="fas fa-sign-out-alt me-2 rotate-2"></i>Check Out</a>
+        <a href="{{route('supplier.index')}}" id="sidenav-active"><i class="fas fa-truck me-2"></i>Supplier</a>
+        <a href="{{route('service.create')}}"><i class="fas fa-sign-in-alt me-2 rotate"></i></i>Create Item</a>
     </div>
 
     <div class="main">
@@ -43,7 +42,5 @@
         </div>
 
         <a href="{{route('supplier.create')}}" class="btn btn-primary btn-sm">Create Supplier</a>
-        <button type="button" class="btn btn-secondary">Edit</button>
-
     </div>
 @endsection
