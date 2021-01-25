@@ -26,37 +26,46 @@
                             </div>
                         </div>
                         <div class="col right">
+                            <!-- Nama Barang -->
                             <label for="nama_barang" class="form-label">Item's Name</label>
-                            <input type="text" class="form-control" id="namaBarang" name="namaBarang">
+                            <input type="text" value="{{Request::old('namaBarang')}}" class="form-control" id="namaBarang" name="namaBarang" required>
 
+                            <!-- Jumlah Barang -->
                             <label for="nama_barang" class="form-label">Quantity</label>
-                            <input type="number" class="form-control" id="quantity" name="quantity" min="0">
+                            <input type="number" value="{{Request::old('quantity')}}" class="form-control" id="quantity" name="quantity" min="0" required>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
+
+                            <!-- Panjang -->
                             <label for="panjang_barang" class="form-label">Length</label>
                             <div class="input-group">
-                                <input type="number" class="form-control" id="length" min="1">
-                                <span class="input-group-text" id="basic-addon2">cm</span>
+                                <input type="number" class="form-control" id="length" min="1" required>
+                                <span class="input-group-text" id="basic-addon2" value="{{Request::old('length')}}">cm</span>
                             </div>
                         </div>
                         <div class="col">
+
+                            <!-- Lebar -->
                             <label for="lebar_barang" class="form-label">Width</label>
                             <div class="input-group">
-                                <input type="number" class="form-control" id="width" min="1">
-                                <span class="input-group-text" id="basic-addon2">cm</span>
+                                <input type="number" class="form-control" id="width" min="1" required>
+                                <span class="input-group-text" id="basic-addon2" value="{{Request::old('width')}}">cm</span>
                             </div>
                         </div>
                         <div class="col">
+
+                            <!-- Tinggi -->
                             <label for="tinggi_barang" class="form-label">Heigth</label>
                             <div class="input-group">
-                                <input type="number" class="form-control" id="heigth" min="1">
-                                <span class="input-group-text" id="basic-addon2">cm</span>
+                                <input type="number" class="form-control" id="heigth" min="1" required>
+                                <span class="input-group-text" id="basic-addon2" value="{{Request::old('heigth')}}">cm</span>
                             </div>
                         </div>
                     </div>
 
+                    <!-- Supplier -->
                     <label for="supplier" class="form-label">Supplier</label>
                         <select id="supplier" name="supplier">
                             @foreach ($daftarSupplier as $item)

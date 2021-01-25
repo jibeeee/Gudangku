@@ -27,7 +27,7 @@
                         </div>
                         <div class="col right">
                             <label for="nama_barang" class="form-label">Supplier's Name</label>
-                            <input type="text" class="form-control" id="namaBarang" name="namaBarang">
+                            <input type="text" class="form-control" id="namaBarang" name="namaBarang" required autofocus>
 
                             <label for="nama_barang" class="form-label">Contact Number</label>
                             <input type="text" class="form-control" id="contact" name="contact">

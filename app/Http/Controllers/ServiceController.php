@@ -27,12 +27,16 @@ class ServiceController extends Controller
         $checkOut = Activity::where('id_user', $id)->where('value_activity', 0)->count();
         $supplier = Supplier::where('id_user', $id)->count();
 
+        $space = Inventory::where('id_user', $id)->sum('quantity');
+        $space = 100*$space/10000;
         return view('services.dashboard')->with([
             'daftarActivity'=>$daftarActivity, 
             'stock'=>$stock,
             'checkIn'=>$checkIn,
             'checkOut'=>$checkOut,
-            'supplier'=>$supplier]);
+            'supplier'=>$supplier,
+            'space'=>$space
+            ]);
     }
 
     public function index_inventory()

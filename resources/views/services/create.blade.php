@@ -31,7 +31,7 @@
         @csrf
         <label for="" class="form-group">Nama Barang*</label>
         <div class="input-group mb-3 border border-secondary border rounded">
-        <input type="text" value="{{Request::old('namaBarang')}}" class="form-control" placeholder=". . . " name="namaBarang" id="namaBarang">
+        <input type="text" value="{{Request::old('namaBarang')}}" class="form-control" placeholder=". . . " name="namaBarang" id="namaBarang" required>
         </div>
 
         <label for="" class="form-group">Kode Barang*</label>
