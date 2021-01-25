@@ -16,7 +16,7 @@
     <div class="main">
         <div class="card shadow">
             <div class="card-body">
-                <h1>Supplier Check</h1>
+                <h1>Create Supplier</h1>
                 <form action="{{route('service.store')}}" method="POST">
                     @csrf
                     <div class="row">
@@ -26,7 +26,7 @@
                             </div>
                         </div>
                         <div class="col right">
-                            <label for="nama_barang" class="form-label">Item's Name</label>
+                            <label for="nama_barang" class="form-label">Supplier's Name</label>
                             <input type="text" class="form-control" id="namaBarang" name="namaBarang">
 
                             <label for="nama_barang" class="form-label">Quantity</label>
