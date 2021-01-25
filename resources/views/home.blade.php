@@ -22,10 +22,10 @@
                 </div>
             </div>
 
-            <div class='row home-row'>
+            <div class='row home-row section-2'>
                 <div class='col'>
                     <div class='home-img-wrapper'>
-                        <img src="{{ asset('img/undraw_logistics_x4dc.svg') }}" alt="ilustrasi gudang" class='home-img' />
+                        <img src="{{ asset('img/undraw_heavy_box_agqi.svg') }}" alt="ilustrasi gudang" class='home-img' />
                     </div>
                 </div>
                 <div class='col' >
