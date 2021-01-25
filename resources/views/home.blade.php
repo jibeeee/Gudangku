@@ -4,6 +4,7 @@
 <link href="{{ asset('css/home.css') }}" rel="stylesheet"/>
     <div class='home-section'>
         <div class='container'>
+            <!-- Section 1 -->
             <div class='row home-row'>
                 <div class='col'>
                     <div class='home-text-wrapper'>
@@ -17,15 +18,16 @@
                 </div>
                 <div class='col'>
                     <div class='home-img-wrapper'>
-                        <img src="{{ asset('img/undraw_logistics_x4dc.svg') }}" alt="ilustrasi gudang" class='home-img' />
+                        <img src="{{ asset('img/home_section1.svg') }}" alt="ilustrasi gudang" class='home-img' />
                     </div>
                 </div>
             </div>
 
+            <!-- Section 2 -->
             <div class='row home-row section-2'>
                 <div class='col'>
                     <div class='home-img-wrapper'>
-                        <img src="{{ asset('img/undraw_heavy_box_agqi.svg') }}" alt="ilustrasi gudang" class='home-img' />
+                        <img src="{{ asset('img/home_section2.svg') }}" alt="ilustrasi gudang" class='home-img' />
                     </div>
                 </div>
                 <div class='col' >
@@ -37,7 +39,25 @@
                         </p>
                     </div>
                 </div>
+            </div>
 
+            <!-- Section 3 -->
+            <div class='row home-row'>
+                <div class='col'>
+                    <div class='home-text-wrapper'>
+                        <h1 class='heading'>GudangKu</h1>
+                        <div class='top-line'>Pertama di ITTelkom Surabaya</div>
+                        <p class='home-subtitle'>
+                            Pencatatan barang di gudang menjadi lebih aman dan mudah, tanpa ribet tanpa bingung.
+                        </p>
+                        <a href="/service" class="btn--primary">Learn More</a>
+                    </div>
+                </div>
+                <div class='col'>
+                    <div class='home-img-wrapper'>
+                        <img src="{{ asset('img/home_section1.svg') }}" alt="ilustrasi gudang" class='home-img' />
+                    </div>
+                </div>
             </div>
         </div>
     </div>

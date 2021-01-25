@@ -29,17 +29,10 @@
                             <label for="nama_barang" class="form-label">Supplier's Name</label>
                             <input type="text" class="form-control" id="namaBarang" name="namaBarang">
 
-                            <label for="nama_barang" class="form-label">Quantity</label>
-                            <input type="number" class="form-control" id="quantity" name="quantity" min="0">
+                            <label for="nama_barang" class="form-label">Contact Number</label>
+                            <input type="text" class="form-control" id="contact" name="contact">
                         </div>
                     </div>
-
-                    {{-- <label for="supplier" class="form-label">Supplier</label>
-                        <select id="supplier" name="supplier">
-                            @foreach ($daftarSupplier as $item)
-                                <option value="{{$item->id}}">{{$item->namaSupplier}}</option>
-                            @endforeach
-                        </select> --}}
 
                     <div class="col submit">
                         <button class="btn btn-large" type="submit">SUBMIT</button>

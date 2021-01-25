@@ -22,7 +22,17 @@ class ServiceController extends Controller
         $id = Auth::id();
         $daftarActivity = Activity::where('id_user', $id)->get();
 
-        return view('services.dashboard')->with('daftarActivity', $daftarActivity);
+        $stock = Inventory::where('id_user', $id)->count();
+        $checkIn = Activity::where('id_user', $id)->where('value_activity', 1)->count();
+        $checkOut = Activity::where('id_user', $id)->where('value_activity', 0)->count();
+        $supplier = Supplier::where('id_user', $id)->count();
+
+        return view('services.dashboard')->with([
+            'daftarActivity'=>$daftarActivity, 
+            'stock'=>$stock,
+            'checkIn'=>$checkIn,
+            'checkOut'=>$checkOut,
+            'supplier'=>$supplier]);
     }
 
     public function index_inventory()

@@ -28,7 +28,7 @@
             <div class='col'>
                 <div class="card shadow">
                     <div class="card-body">
-                        <p class='card-highlight purple'>1000</p>
+                        <p class='card-highlight purple'>{{$stock}}</p>
                         <p class='card-text'>Total Stocks</p>
                     </div>
                 </div>
@@ -36,7 +36,7 @@
             <div class='col'>
                 <div class="card shadow">
                     <div class="card-body">
-                        <p class='card-highlight green'>1000</p>
+                        <p class='card-highlight green'>{{$checkIn}}</p>
                         <p class='card-text'>Number of Check In</p>
                     </div>
                 </div>
@@ -44,15 +44,15 @@
             <div class='col'>
                 <div class="card shadow">
                     <div class="card-body">
-                        <p class='card-highlight red'>1000</p>
-                        <p class='card-text'>Number of Check In</p>
+                        <p class='card-highlight red'>{{$checkOut}}</p>
+                        <p class='card-text'>Number of Check Out</p>
                     </div>
                 </div>
             </div>
             <div class='col'>
                 <div class="card shadow">
                     <div class="card-body">
-                        <p class='card-highlight grey'>1000</p>
+                        <p class='card-highlight grey'>{{$supplier}}</p>
                         <p class='card-text'>Total Suppliers</p>
                     </div>
                 </div>
