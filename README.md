@@ -8,7 +8,7 @@ Anggota:
 4. Gagas Putra Dewangga
 5. Geraldo Brata Hiroshi Purba
 
-#Install Sweet Alert
+# Install Sweet Alert
 
 --   composer require realrashid/sweet-alert   --
 
