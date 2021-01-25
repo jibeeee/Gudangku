@@ -3,7 +3,7 @@
 @section('content')
     <link href="{{ asset('css/sidenav.css') }}" rel="stylesheet"/>
     <link href="{{ asset('css/supplier.css') }}" rel="stylesheet"/>
-    
+
     <!-- SideNav -->
     <div class="sidenav">
         <a href="{{route('service.index')}}"><i class="fas fa-th-large me-2"></i>Dashboard</a>
@@ -22,24 +22,27 @@
                     <div class="row">
                         <div class="col left">
                             <div class='home-img-wrapper'>
-                                <img src="{{asset('img/box.svg')}}" alt="ilustrasi kotak" class='home-img' />
+                                <img src="{{asset('img/box.svg')}}" alt="ilustrasi kotak" class='home-img'/>
                             </div>
                         </div>
                         <div class="col right">
-                            <label for="nama_barang" class="form-label">Item's Name</label>
-                            <input type="text" class="form-control" id="namaBarang" name="namaBarang">
-        
-                            <label for="nama_barang" class="form-label">Quantity</label>
-                            <input type="number" class="form-control" id="quantity" name="quantity" min="0">
+                            <label for="nama_barang" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="namaSupplier" name="namaSupplier">
+
+                            <label for="nama_barang" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="alamatSupplier" name="alamatSupplier">
+
+                            <label for="nama_barang" class="form-label">Telephone</label>
+                            <input type="text" class="form-control" id="nomorSupplier" name="nomorSupplier">
                         </div>
                     </div>
 
-                    <label for="supplier" class="form-label">Supplier</label>
+                    {{-- <label for="supplier" class="form-label">Supplier</label>
                         <select id="supplier" name="supplier">
                             @foreach ($daftarSupplier as $item)
                                 <option value="{{$item->id}}">{{$item->namaSupplier}}</option>
                             @endforeach
-                        </select>
+                        </select> --}}
 
                     <div class="col submit">
                         <button class="btn btn-large" type="submit">SUBMIT</button>

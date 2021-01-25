@@ -25,16 +25,23 @@
                             <th scope="col">Name</th>
                             <th scope="col">Dimension</th>
                             <th scope="col">Quantity</th>
+                            <th scope="col">Supplier</th>
+                            <th scope="col">Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($daftarInventory as $key => $item)
                             <tr>
                                 <th scope="row">{{(int)$key + 1}}</th>
-                                <td>{{isset($item->barang->namaBarang) ? $item->barang->namaBarang : '-'}}</td>
-                                <td>{{isset($item->barang->dimension) ? $item->barang->dimension : '-'}}</td>
+                                <td>{{isset($item->namaBarang) ? $item->namaBarang : '-'}}</td>
+                                <td>{{isset($item->dimension) ? $item->dimension : '-'}}</td>
                                 <td>{{$item->quantity}}</td>
+                                <td>{{$item->namaSupplier}}</td>
 
+                                <td>
+                                    <div class="d-flex">
+                                        <a href="{{route('service.edit',$item->id)}}" class="btn btn-outline-primary btn-sm mb-3 mr-1">Add/Remove</a>
+                                    </div>
                                 </td>
                             </tr>
                         @endforeach

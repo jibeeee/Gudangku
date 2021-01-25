@@ -28,9 +28,21 @@ class ServiceController extends Controller
     public function index_inventory()
     {
         $id = Auth::id();
-        $daftarInventory = Inventory::where('id_user', $id)->get();
 
-        return view('services.inventory')->with('daftarInventory', $daftarInventory);
+        // $query = DB::table('supplier as s')
+        //         ->select('namaSupplier', 'namaBarang', 'dimension', 'quantity', 'i.id')
+        //         ->join('barang as b', 's.id', '=', 'b.id_supplier')
+        //         ->join('inventory as i', 'b.id', '=', 'i.id_barang')
+        //         ->where('b.id_user', $id)
+        //         ->get();
+
+        $query = Supplier::select('namaSupplier', 'namaBarang', 'dimension', 'quantity', 'b.id')
+                ->join('barang as b', 'supplier.id', '=', 'b.id_supplier')
+                ->join('inventory as i', 'b.id', '=', 'i.id_barang')
+                ->where('b.id_user', $id)
+                ->get();
+        // dd($query);
+        return view('services.inventory')->with('daftarInventory', $query);
     }
 
     /**
@@ -106,7 +118,26 @@ class ServiceController extends Controller
      */
     public function edit($id)
     {
-        //
+        $id_user = Auth::id();
+
+        $barangId = $id;
+
+        // $query = DB::table('supplier as s')
+        //         ->select('namaBarang', 'quantity', 'i.id')
+        //         ->join('barang as b', 's.id', '=', 'b.id_supplier')
+        //         ->join('inventory as i', 'b.id', '=', 'i.id_barang')
+        //         ->where('b.id_user', $id_user)
+        //         ->where('i.id' , $inventoryId)
+        //         ->first();
+
+        $query = Supplier::select('namaBarang', 'quantity', 'b.id')
+        ->join('barang as b', 'supplier.id', '=', 'b.id_supplier')
+        ->join('inventory as i', 'b.id', '=', 'i.id_barang')
+        ->where('b.id_user', $id_user)
+        ->where('b.id' , $barangId)
+        ->first();
+        // dd($query);
+        return view ('services.edit', compact('barangId', 'query'));
     }
 
     /**
@@ -118,7 +149,34 @@ class ServiceController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $id_user = Auth::id();
+
+        $updateBarang = Barang::find($id);
+        $updateBarang->namaBarang = $request->namaBarang;
+        $updateBarang->save();
+
+        $updateInventory= Inventory::where('id_barang', $id)->first();
+        $sebelum = $updateInventory->quantity;
+        $updateInventory->quantity = $request->quantity;
+        $sesudah = $request->quantity;
+        $updateInventory->save();
+
+
+        if ($sesudah == $sebelum) return redirect()->route('service.inventory');
+
+        $addActivity = new Activity;
+        $addActivity->id_barang = $id;
+        $addActivity->id_user = $id_user;
+        $addActivity->value_quantity = $sesudah - $sebelum;
+        $addActivity->value_activity = 1;
+        // Check-in value
+        if ($sesudah < $sebelum)
+            $addActivity->value_activity = 2;
+
+        $addActivity->save();
+        // Alert::success('Edit Successfully', 'Data Barang Berhasil Diubah');
+
+        return redirect()->route('service.inventory');
     }
 
     /**

@@ -26,9 +26,8 @@ Auth::routes();
 
 Route::group(['middleware' => 'auth'], function() {
     Route::get('/service/inventory', [ServiceController::class, 'index_inventory'])->name('service.inventory');
-    Route::get('/service/supplier', [ServiceController::class, 'supplier'])->name('service.supplier');
-    Route::resource('/service', ServiceController::class)->middleware('auth');
     Route::resource('/supplier', SupplierController::class)->middleware('auth');
+    Route::resource('/service', ServiceController::class)->middleware('auth');
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

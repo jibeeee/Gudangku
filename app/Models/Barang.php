@@ -21,4 +21,8 @@ class Barang extends Model
         return $this->hasOne(Activity::class);
     }
 
+    public function supplier()
+    {
+        return $this->belongsTo(Supplier::class);
+    }
 }
