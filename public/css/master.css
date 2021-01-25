@@ -7,6 +7,12 @@ body {
 nav {
     background-color: white;
     z-index: 1;
+    width: 100%;
+}
+
+.navbar {
+    position: fixed;
+    top: 0px;
 }
 
 .d-flex {
@@ -224,4 +230,8 @@ nav {
 }
 .black {
     color: #3b3b3b;
+}
+
+.content {
+    margin-top: 100px;
 }

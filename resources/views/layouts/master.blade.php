@@ -17,10 +17,10 @@
             <div class="d-flex">
                 <ul class="navbar-nav nav justify-content-end">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Home</a>
+                        <a class="nav-link" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Services</a>
+                        <a class="nav-link" href="/service">Services</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto">
@@ -58,7 +58,11 @@
         </div>
     </nav>
 
-@yield('content')
+    <!-- Content Body -->
+    <div class="content">
+        @yield('content')
+    </div>
+
 </body>
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}"></script>
