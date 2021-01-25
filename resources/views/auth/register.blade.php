@@ -30,7 +30,7 @@
                     </div>
                     <div class="row">
                         <div class="col center">
-                            <a href="" class="btn btn-large-secondary-2">Register</a>
+                            <a href="/login" class="btn btn-large-secondary-2">{{ __('Login') }}</a>
                         </div>
                     </div>
                 </div>
