@@ -41,8 +41,8 @@
                 </table>
             </div>
         </div>
-
-        <button type="button" class="btn btn-primary">Create</button>
+        <a href="/service/create" class="btn btn--primary">Create</a>
+        <button type="button" class="btn btn-primary" href="/supplier/create">Create</button>
         <button type="button" class="btn btn-secondary">Edit</button>
 
     </div>
