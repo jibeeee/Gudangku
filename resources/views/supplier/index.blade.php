@@ -42,7 +42,7 @@
             </div>
         </div>
 
-        <button type="button" class="btn btn-primary">Create</button>
+        <a href="{{route('supplier.create')}}" class="btn btn-primary btn-sm">Create Supplier</a>
         <button type="button" class="btn btn-secondary">Edit</button>
 
     </div>

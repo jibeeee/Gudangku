@@ -14,18 +14,18 @@ class GudangSeeder extends Seeder
      */
     public function run()
     {
-            // DB::table('users')->insert([
-            // [
-            //     'name' => 'Moch Yusuf Fathussalam',
-            //     'email' => 'yusuf@id.com',
-            //     'password' => 'yusuf2332'
-            // ],
-            // [
-            //     'name' => 'Roy Satrio Aji',
-            //     'email' => 'roy@id.com',
-            //     'password' => 'roy2332'
-            // ]
-            // ]);
+            DB::table('users')->insert([
+            [
+                'name' => 'Moch Yusuf Fathussalam',
+                'email' => 'yusuf@id.com',
+                'password' => 'yusuf2332'
+            ],
+            [
+                'name' => 'Roy Satrio Aji',
+                'email' => 'roy@id.com',
+                'password' => 'roy2332'
+            ]
+            ]);
 
             DB::table('supplier')->insert([
             [
