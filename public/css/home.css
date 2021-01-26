@@ -1,17 +1,13 @@
 .home-section {
     color: #4a3175;
-    padding: 160px 0;
+    padding: 0px;
 }
 
 .home-row {
-    align-items: center;
     display: "flex";
-    flex-direction: "row";
-    height: 568px;
-}
+    align-items: center;
 
-.section-2 {
-    padding-top: 200px;
+    height: 568px;
 }
 
 .row {

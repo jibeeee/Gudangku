@@ -27,8 +27,16 @@ class ServiceController extends Controller
         $checkOut = Activity::where('id_user', $id)->where('value_activity', 0)->count();
         $supplier = Supplier::where('id_user', $id)->count();
 
-        $space = Inventory::where('id_user', $id)->sum('quantity');
-        $space = 100*$space/10000;
+        $quantity = Inventory::where('id_user', $id)->where('quantity','>', 0)->get();
+        $dimension = Barang::where('id_user', $id)->sum('dimension');
+        $space = 0;
+        // 100*$quantity*$dimension/10000;
+
+        foreach($quantity as $item){
+            $dimension = Barang::where('id', $item->id_barang)->first();
+            $space = $space + ($item->quantity * $dimension->dimension);
+        }
+        $space = 100*$space/12500000;
 
         // $query = Activity::select('quantity', 'dimension')
         //         ->join('barang as b', 'Activity.id_barang', '=', 'b.id')

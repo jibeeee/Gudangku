@@ -13,7 +13,7 @@
                         <p class='home-subtitle'>
                             Pencatatan barang di gudang menjadi lebih aman dan mudah, tanpa ribet tanpa bingung.
                         </p>
-                        <a href="/service" class="btn--primary">Learn More</a>
+                        <a href="/service" class="btn--primary">Geting Started</a>
                     </div>
                 </div>
                 <div class='col'>
@@ -24,7 +24,7 @@
             </div>
 
             <!-- Section 2 -->
-            <div class='row home-row section-2'>
+            <div class='row home-row'>
                 <div class='col'>
                     <div class='home-img-wrapper'>
                         <img src="{{ asset('img/home_section2.svg') }}" alt="ilustrasi gudang" class='home-img' />
@@ -37,25 +37,6 @@
                             Hampir 50% dari pemilik Online Shop tidak mempunyai ruang yang cukup untuk menyimpan barang.<br><br>
                             Kami membantu pemilik Online Shop untuk menyimpan barang jualannya secara praktis dan aman.
                         </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Section 3 -->
-            <div class='row home-row'>
-                <div class='col'>
-                    <div class='home-text-wrapper'>
-                        <h1 class='heading'>GudangKu</h1>
-                        <div class='top-line'>Pertama di ITTelkom Surabaya</div>
-                        <p class='home-subtitle'>
-                            Pencatatan barang di gudang menjadi lebih aman dan mudah, tanpa ribet tanpa bingung.
-                        </p>
-                        <a href="/service" class="btn--primary">Learn More</a>
-                    </div>
-                </div>
-                <div class='col'>
-                    <div class='home-img-wrapper'>
-                        <img src="{{ asset('img/home_section1.svg') }}" alt="ilustrasi gudang" class='home-img' />
                     </div>
                 </div>
             </div>
