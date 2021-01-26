@@ -42,20 +42,18 @@
             </div>
 
             <!-- Section 3 -->
-            <div class='row home-row'>
+            <div class='row home-row section-3'>
                 <div class='col'>
                     <div class='home-text-wrapper'>
-                        <h1 class='heading'>GudangKu</h1>
-                        <div class='top-line'>Pertama di ITTelkom Surabaya</div>
+                        <div class='top-line'>Kenapa Gudangku?</div>
                         <p class='home-subtitle'>
-                            Pencatatan barang di gudang menjadi lebih aman dan mudah, tanpa ribet tanpa bingung.
+                            Barang tersimpan aman, asuransi untuk stok barang, menghemat biaya sewa gudang, dan barang tersimpan dengan rapi.
                         </p>
-                        <a href="/service" class="btn--primary">Learn More</a>
                     </div>
                 </div>
                 <div class='col'>
                     <div class='home-img-wrapper'>
-                        <img src="{{ asset('img/home_section1.svg') }}" alt="ilustrasi gudang" class='home-img' />
+                        <img src="{{ asset('img/undraw_deliveries_131a.svg') }}" alt="ilustrasi gudang" class='home-img' />
                     </div>
                 </div>
             </div>
