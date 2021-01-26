@@ -10,6 +10,10 @@
     height: 568px;
 }
 
+.section-3 {
+    padding-top: 300px;
+}
+
 .row {
     display: flex;
     margin-right: -15px;
