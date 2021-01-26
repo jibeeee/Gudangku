@@ -40,6 +40,23 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Section 3 -->
+            <div class='row home-row section-3'>
+                <div class='col'>
+                    <div class='home-text-wrapper'>
+                        <div class='top-line'>Kenapa Gudangku???</div>
+                        <p class='home-subtitle'>
+                            Barang tersimpan aman, asuransi untuk stok barang, menghemat biaya sewa gudang, dan barang tersimpan dengan rapi.
+                        </p>
+                    </div>
+                </div>
+                <div class='col'>
+                    <div class='home-img-wrapper'>
+                        <img src="{{ asset('img/undraw_deliveries_131a.svg') }}" alt="ilustrasi gudang" class='home-img' />
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 @endsection
