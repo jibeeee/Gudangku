@@ -53,7 +53,7 @@
                 </div>
                 <div class='col'>
                     <div class='home-img-wrapper'>
-                        <img src="{{ asset('img/undraw_deliveries_131a.svg') }}" alt="ilustrasi gudang" class='home-img' />
+                        <img src="{{ asset('img/undraw_deliveries_131a (1).svg') }}" alt="ilustrasi gudang" class='home-img' />
                     </div>
                 </div>
             </div>
