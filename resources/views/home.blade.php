@@ -45,7 +45,7 @@
             <div class='row home-row section-3'>
                 <div class='col'>
                     <div class='home-text-wrapper'>
-                        <div class='top-line'>Kenapa Gudangku?</div>
+                        <div class='top-line'>Kenapa Gudangku???</div>
                         <p class='home-subtitle'>
                             Barang tersimpan aman, asuransi untuk stok barang, menghemat biaya sewa gudang, dan barang tersimpan dengan rapi.
                         </p>
