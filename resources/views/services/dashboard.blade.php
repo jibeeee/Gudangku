@@ -17,7 +17,7 @@
         <div class="bar">
             <p>Total Available Space</p>
             <div class="progress shadow">
-                <div class="progress-bar" role="progressbar" style="width: {{$space}};" aria-valuenow={{$space}} aria-valuemin="0" aria-valuemax="100">{{$space}}%</div>
+                <div class="progress-bar" role="progressbar" style="width: {{$space}}}" aria-valuenow={{$space}} aria-valuemin="0" aria-valuemax="100">{{$space}}%</div>
             </div>
 
         </div>

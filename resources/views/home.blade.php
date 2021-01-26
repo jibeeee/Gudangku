@@ -42,7 +42,7 @@
             </div>
 
             <!-- Section 3 -->
-            <div class='row home-row section-3'>
+            <div class='row home-row'>
                 <div class='col'>
                     <div class='home-text-wrapper'>
                         <div class='top-line'>Kenapa Gudangku???</div>

@@ -36,7 +36,7 @@ class ServiceController extends Controller
             $dimension = Barang::where('id', $item->id_barang)->first();
             $space = $space + ($item->quantity * $dimension->dimension);
         }
-        $space = 100*$space/12500000;
+        $space = round(100*$space/12500000);
 
         // $query = Activity::select('quantity', 'dimension')
         //         ->join('barang as b', 'Activity.id_barang', '=', 'b.id')
